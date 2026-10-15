@@ -7,6 +7,8 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<!-- EmailJS SDK -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
 <style>
   html, body {
@@ -423,6 +425,15 @@ width:100%;
     backdrop-filter: blur(4px);
     border: 1px solid rgba(255,255,255,0.15);
   }
+  .project-icon svg {
+    width: 24px; height: 24px; stroke: var(--orange); fill: none; stroke-width: 2;
+    stroke-linecap: round; stroke-linejoin: round;
+    transition: transform 0.25s, stroke 0.25s;
+  }
+  .project-card:hover .project-icon svg {
+    stroke: #ffffff;
+    transform: scale(1.1);
+  }
   .project-status {
     font-size: 0.65rem; font-weight: 700; letter-spacing: 0.08em;
     padding: 0.3rem 0.8rem; border-radius: 50px;
@@ -506,6 +517,8 @@ width:100%;
   .tl-company { font-size: 0.82rem; font-weight: 600; color: var(--blue-accent); margin-bottom: 0.3rem; }
   .tl-date { font-size: 0.72rem; color: var(--gray); margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.4rem; }
   .tl-desc { font-size: 0.82rem; color: var(--gray); line-height: 1.75; }
+  .tl-desc ul { list-style-type: disc; padding-left: 1.25rem; margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.45rem; }
+  .tl-desc li { line-height: 1.6; }
   .tl-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-top: 1rem; }
   .tl-tag {
     font-size: 0.63rem; font-weight: 700; padding: 0.22rem 0.65rem;
@@ -531,6 +544,15 @@ width:100%;
     background: var(--light-bg); display: flex; align-items: center; justify-content: center;
     font-size: 1.6rem; margin-bottom: 1.2rem; border: 1.5px solid #e2e8f0;
   }
+  .edu-icon svg {
+    width: 26px; height: 26px; stroke: var(--orange); fill: none; stroke-width: 2;
+    stroke-linecap: round; stroke-linejoin: round;
+    transition: transform 0.25s, stroke 0.25s;
+  }
+  .edu-card:hover .edu-icon svg {
+    stroke: var(--navy);
+    transform: scale(1.1);
+  }
   .edu-degree { font-size: 1rem; font-weight: 800; color: var(--navy); margin-bottom: 0.3rem; }
   .edu-school { font-size: 0.82rem; font-weight: 600; color: var(--orange); margin-bottom: 0.25rem; }
   .edu-period { font-size: 0.72rem; color: var(--gray); margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.35rem; }
@@ -555,6 +577,19 @@ width:100%;
     width: 50px; height: 50px; border-radius: 12px; flex-shrink: 0;
     display: flex; align-items: center; justify-content: center;
     font-size: 1.5rem; border: 1.5px solid #e2e8f0; background: var(--light-bg);
+  }
+  .cert-logo svg {
+    width: 24px; height: 24px; stroke: var(--navy); fill: none; stroke-width: 2;
+    stroke-linecap: round; stroke-linejoin: round;
+    transition: transform 0.25s, stroke 0.25s;
+  }
+  .cert-card:hover .cert-logo svg {
+    stroke: var(--orange);
+    transform: scale(1.1);
+  }
+  .f-heart-svg {
+    width: 14px; height: 14px; fill: #ef4444; stroke: #ef4444; stroke-width: 2;
+    display: inline-block; vertical-align: -2px; margin: 0 3px;
   }
   
   .cert-name { font-size: 0.88rem; font-weight: 800; color: var(--navy); margin-bottom: 0.2rem; line-height: 1.3; }
@@ -760,7 +795,7 @@ width:100%;
       </p>
       <div style="display:flex;gap:0.8rem;flex-wrap:wrap;margin-bottom:2.5rem;opacity:0;animation:fadeUp 0.6s 0.65s ease forwards">
         <a href="#about" class="about-btn" style="margin-bottom:0;opacity:1;animation:none">About Me <i class="fas fa-arrow-right"></i></a>
-        <a href="images/rajrarna_new_resuem (1).pdf" class="resume-btn" style="margin-bottom:0;margin-left:0;opacity:1;animation:none" download><i class="fas fa-download"></i> Download Resume</a>
+        <a href="images/Rajratna_Resume_main_sd_2.pdf" class="resume-btn" style="margin-bottom:0;margin-left:0;opacity:1;animation:none" download><i class="fas fa-download"></i> Download Resume</a>
       </div>
       <div class="social-icons">
         <a href="https://www.linkedin.com/in/rajratna-mathpati-b39034351/" class="sicon linkedin" target="_blank"><i class="fab fa-linkedin-in"></i></a>
@@ -830,7 +865,9 @@ width:100%;
     <div class="project-card reveal rd1" data-category="cicd">
       <div class="project-header">
         <div class="project-icon-row">
-          <div class="project-icon">🚀</div>
+          <div class="project-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
+          </div>
           <span class="project-status status-live">Live</span>
         </div>
         <div class="project-title-area">
@@ -857,7 +894,9 @@ width:100%;
     <div class="project-card reveal rd2" data-category="containers">
       <div class="project-header">
         <div class="project-icon-row">
-          <div class="project-icon">🐳</div>
+          <div class="project-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>
+          </div>
           <span class="project-status status-done">Completed</span>
         </div>
         <div class="project-title-area">
@@ -884,7 +923,9 @@ width:100%;
     <div class="project-card reveal rd3" data-category="cloud">
       <div class="project-header">
         <div class="project-icon-row">
-          <div class="project-icon">☁️</div>
+          <div class="project-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+          </div>
           <span class="project-status status-live">Live</span>
         </div>
         <div class="project-title-area">
@@ -912,7 +953,9 @@ width:100%;
     <div class="project-card reveal rd1" data-category="iac">
       <div class="project-header">
         <div class="project-icon-row">
-          <div class="project-icon">🏗️</div>
+          <div class="project-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/></svg>
+          </div>
           <span class="project-status status-wip">In Progress</span>
         </div>
         <div class="project-title-area">
@@ -939,7 +982,9 @@ width:100%;
     <div class="project-card reveal rd2" data-category="iac">
       <div class="project-header">
         <div class="project-icon-row">
-          <div class="project-icon">⚙️</div>
+          <div class="project-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
           <span class="project-status status-done">Completed</span>
         </div>
         <div class="project-title-area">
@@ -966,7 +1011,9 @@ width:100%;
     <div class="project-card reveal rd3" data-category="cicd">
       <div class="project-header">
         <div class="project-icon-row">
-          <div class="project-icon">🔍</div>
+          <div class="project-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+          </div>
           <span class="project-status status-done">Completed</span>
         </div>
         <div class="project-title-area">
@@ -1005,49 +1052,30 @@ width:100%;
       <div class="tl-dot current"></div>
       <div class="tl-card">
         <div class="tl-meta">
-          <span class="tl-role">DevOps Engineer Intern</span>
-          <span class="tl-badge current">Internship </span>
+          <span class="tl-role">Full Stack Developer Intern</span>
+          <span class="tl-badge current">Internship</span>
         </div>
-        <div class="tl-company"><i class="fas fa-building" style="margin-right:0.4rem"></i>Tech Startup (Remote)</div>
-        <div class="tl-date"><i class="fas fa-calendar-alt"></i> sep 2025 – Dec 2025</div>
-        <div class="tl-desc">Architecting and maintaining CI/CD pipelines using Jenkins and GitHub Actions. Managing containerized workloads on Kubernetes, writing Terraform modules for AWS infrastructure, and implementing monitoring with CloudWatch and Grafana dashboards.</div>
+        <div class="tl-company"><i class="fas fa-building" style="margin-right:0.4rem"></i>Levia Technology</div>
+        <div class="tl-date"><i class="fas fa-calendar-alt"></i> Jul 2026 – Sep 2026</div>
+        <div class="tl-desc">
+          <ul>
+            <li>Developing reusable React and Tailwind components for touchscreen kiosk applications, translating Figma designs into responsive production interfaces.</li>
+            <li>Architected a normalized PostgreSQL schema in Supabase spanning tables for a retail kiosk platform, implementing Row-Level Security (RLS) policies to enforce strict customer/admin data separation.</li>
+            <li>Engineered real-time admin tooling using Supabase Realtime subscriptions to instantly sync bulk discount updates and dynamic storefront theming across all active kiosk sessions.</li>
+            <li>Developed an admin dashboard for real-time inventory and order-fulfillment tracking, giving non-technical staff self-service visibility into stock levels.</li>
+          </ul>
+        </div>
         <div class="tl-tags">
-          <span class="tl-tag">Jenkins</span><span class="tl-tag">Kubernetes</span><span class="tl-tag">Terraform</span><span class="tl-tag">AWS</span><span class="tl-tag">Grafana</span>
+          <span class="tl-tag">React.js</span>
+          <span class="tl-tag">Tailwind CSS</span>
+          <span class="tl-tag">PostgreSQL</span>
+          <span class="tl-tag">Supabase</span>
+          <span class="tl-tag">Row-Level Security (RLS)</span>
+          <span class="tl-tag">Supabase Realtime</span>
+          <span class="tl-tag">Figma</span>
         </div>
       </div>
     </div>
-
-    <div class="tl-item reveal rd2">" 
-      <div class="tl-dot blue"></div>
-      <div class="tl-card">
-        <div class="tl-meta">
-          <span class="tl-role">Cloud & Linux Trainee</span>
-          <span class="tl-badge">Internship</span>
-        </div>
-        <div class="tl-company"><i class="fas fa-building" style="margin-right:0.4rem"></i>IT Solutions Pvt. Ltd., Pune</div>
-        <div class="tl-date"><i class="fas fa-calendar-alt"></i> june2025 – Aug 2025</div>
-        <div class="tl-desc">Gained hands-on experience configuring Linux servers, managing Docker containers, and automating repetitive sysadmin tasks using Bash and Python scripts. Assisted in migrating on-prem services to AWS EC2 and S3.</div>
-        <div class="tl-tags">
-          <span class="tl-tag">Linux</span><span class="tl-tag">Docker</span><span class="tl-tag">Python</span><span class="tl-tag">Bash</span><span class="tl-tag">AWS EC2</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- <div class="tl-item reveal rd3">
-      <div class="tl-dot"></div>
-      <div class="tl-card">
-        <div class="tl-meta">
-          <span class="tl-role">Open Source Contributor</span>
-          <span class="tl-badge">Volunteer</span>
-        </div>
-        <div class="tl-company"><i class="fab fa-github" style="margin-right:0.4rem"></i>GitHub — Personal & Community Projects</div>
-        <div class="tl-date"><i class="fas fa-calendar-alt"></i> 2023 – Present</div>
-        <div class="tl-desc">Actively contributing to DevOps-focused open source repositories. Built reusable Ansible playbooks, Helm chart templates, and Terraform modules used by the community. Documented best practices for CI/CD pipeline design.</div>
-        <div class="tl-tags">
-          <span class="tl-tag">Ansible</span><span class="tl-tag">Helm</span><span class="tl-tag">Terraform</span><span class="tl-tag">Git</span>
-        </div>
-      </div>
-    </div> -->
 
   </div>
 </section>
@@ -1062,7 +1090,9 @@ width:100%;
   <div class="edu-grid">
 
     <div class="edu-card reveal rd1">
-      <div class="edu-icon">🎓</div>
+      <div class="edu-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
+      </div>
       <div class="edu-degree">BCA</div>
       <div class="edu-school"></div>Modern College of Arts, Science and Commerce, Pune
       <div class="edu-period"><i class="fas fa-calendar-alt"></i> 2022 – 2025 (completed) </div>
@@ -1071,7 +1101,9 @@ width:100%;
     </div>
 
     <div class="edu-card reveal rd2">
-      <div class="edu-icon">🎓</div>
+      <div class="edu-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
+      </div>
       <div class="edu-degree">MCA</div>
       <div class="edu-school">Vishwakarma University</div>
       <div class="edu-period"><i class="fas fa-calendar-alt"></i> 2025 – present</div>
@@ -1080,7 +1112,9 @@ width:100%;
     </div>
 
     <!-- <div class="edu-card reveal rd3">
-      <div class="edu-icon">📚</div>
+      <div class="edu-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+      </div>
       <div class="edu-degree">SSC — Secondary Education</div>
       <div class="edu-school">Maharashtra State Board</div>
       <div class="edu-period"><i class="fas fa-calendar-alt"></i> 2018 – 2020</div>
@@ -1101,7 +1135,9 @@ width:100%;
   <div class="cert-grid">
 
     <div class="cert-card reveal rd1">
-      <div class="cert-logo">☁️</div>
+      <div class="cert-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+      </div>
       <div class="cert-info">
         <div class="cert-name">AWS Certified Cloud Practitioner</div>
         <div class="cert-issuer">Amazon Web Services</div>
@@ -1111,7 +1147,9 @@ width:100%;
     </div>
 
     <div class="cert-card reveal rd2">
-      <div class="cert-logo">🐳</div>
+      <div class="cert-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>
+      </div>
       <div class="cert-info">
         <div class="cert-name">Docker Certified Associate</div>
         <div class="cert-issuer">Docker Inc.</div>
@@ -1121,7 +1159,9 @@ width:100%;
     </div>
 
     <!-- <div class="cert-card reveal rd3">
-      <div class="cert-logo">⚙️</div>
+      <div class="cert-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+      </div>
       <div class="cert-info">
         <div class="cert-name">Certified Kubernetes Application Developer (CKAD)</div>
         <div class="cert-issuer">CNCF / Linux Foundation</div>
@@ -1131,7 +1171,9 @@ width:100%;
     </div> -->
 
     <!-- <div class="cert-card reveal rd1">
-      <div class="cert-logo">🏗️</div>
+      <div class="cert-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/></svg>
+      </div>
       <div class="cert-info">
         <div class="cert-name">HashiCorp Terraform Associate</div>
         <div class="cert-issuer">HashiCorp</div>
@@ -1141,7 +1183,9 @@ width:100%;
     </div> -->
 
     <div class="cert-card reveal rd2">
-      <div class="cert-logo">🐧</div>
+      <div class="cert-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+      </div>
       <div class="cert-info">
         <div class="cert-name">Linux Foundation Certified SysAdmin</div>
         <div class="cert-issuer">Linux Foundation</div>
@@ -1151,7 +1195,9 @@ width:100%;
     </div>
 
     <!-- <div class="cert-card reveal rd3">
-      <div class="cert-logo">🔧</div>
+      <div class="cert-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+      </div>
       <div class="cert-info">
         <div class="cert-name">Red Hat Certified System Administrator</div>
         <div class="cert-issuer">Red Hat</div>
@@ -1230,16 +1276,34 @@ width:100%;
         <div><div class="cl-label">WhatsApp</div><div class="cl-val">Message me directly</div></div>
       </a>
     </div>
-    <div class="contact-form reveal rd2">
+    <form id="contact-form" class="contact-form reveal rd2">
       <p class="f-title">Send a Message</p>
+
       <div class="frow">
-        <div class="fg"><label class="fl">Name</label><input class="fi" type="text" placeholder="Your name"></div>
-        <div class="fg"><label class="fl">Email</label><input class="fi" type="email" placeholder="your@email.com"></div>
+        <div class="fg">
+          <label class="fl" for="cf-name">Name</label>
+          <input class="fi" id="cf-name" name="name" type="text" placeholder="Your name" required>
+        </div>
+        <div class="fg">
+          <label class="fl" for="cf-email">Email</label>
+          <input class="fi" id="cf-email" name="email" type="email" placeholder="your@email.com" required>
+        </div>
       </div>
-      <div class="fg"><label class="fl">Subject</label><input class="fi" type="text" placeholder="What's this about?"></div>
-      <div class="fg"><label class="fl">Message</label><textarea class="fta" placeholder="Tell me about your project..."></textarea></div>
-      <button class="btn-solid" style="width:100%;justify-content:center"><i class="fas fa-paper-plane"></i> Send Message</button>
-    </div>
+      <div class="fg">
+        <label class="fl" for="cf-subject">Subject</label>
+        <input class="fi" id="cf-subject" name="subject" type="text" placeholder="What's this about?" required>
+      </div>
+      <div class="fg">
+        <label class="fl" for="cf-message">Message</label>
+        <textarea class="fta" id="cf-message" name="message" placeholder="Tell me about your project..." required></textarea>
+      </div>
+      <button type="submit" id="contact-submit-btn" class="btn-solid" style="width:100%;justify-content:center">
+        <i class="fas fa-paper-plane"></i> <span id="btn-text">Send Message</span>
+      </button>
+
+      <!-- Inline Status Alert -->
+      <div id="form-status" style="display:none;margin-top:1rem;padding:0.75rem 1rem;border-radius:8px;font-size:0.85rem;font-weight:600;text-align:center;"></div>
+    </form>
   </div>
 </section>
 
@@ -1247,7 +1311,7 @@ width:100%;
 <footer>
   <div class="f-logo">Rajratna  <span>Mathpati</span></div>
   <p>© 2026 All rights reserved.</p>
-  <p>Built with ❤️ &amp; <span style="color:var(--orange)">passion</span></p>
+  <p>Built with <svg class="f-heart-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg> &amp; <span style="color:var(--orange)">passion</span></p>
 </footer>
 
 <script>
@@ -1371,21 +1435,71 @@ menuToggle.addEventListener("click", function(){
 navLinks.classList.toggle("active");
 });
 
-function sendMessage() {
-  const name = document.querySelector('input[type="text"]').value;
-  const email = document.querySelector('input[type="email"]').value;
-  const subject = document.querySelector('input[placeholder="What\'s this about?"]').value;
-  const message = document.querySelector('textarea').value;
+// ==========================================
+// ── EmailJS Contact Form Submission ───────
+// ==========================================
+// Replace these 3 values with your credentials from emailjs.com dashboard:
+const EMAILJS_PUBLIC_KEY  = "bl2A7zZ_GPsLTf5Ee";
+const EMAILJS_SERVICE_ID  = "service_t54kuna";
+const EMAILJS_TEMPLATE_ID = "template_czxll69";          // Email to Rajratna (Inquiry)
+const EMAILJS_AUTOREPLY_TEMPLATE_ID = "template_7of60nk"; // Email to Visitor (Auto-Reply)
 
-  if (!name || !email || !subject || !message) {
-    alert("Please fill in all fields before sending.");
-    return;
-  }
+// Initialize EmailJS
+if (typeof emailjs !== 'undefined') {
+  emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+}
 
-  // Here you would typically send the data to your backend or an email service
-  // For this example, we'll just show a success message
-  alert("Thank you for reaching out! I'll get back to you soon.");
-};
+const contactForm = document.getElementById("contact-form");
+const contactBtn = document.getElementById("contact-submit-btn");
+const formStatus = document.getElementById("form-status");
+
+if (contactForm) {
+  contactForm.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const originalBtnHtml = contactBtn.innerHTML;
+    contactBtn.disabled = true;
+    contactBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> <span>Sending...</span>';
+    formStatus.style.display = "none";
+
+    // Dispatch both: Email to you AND Auto-Reply to the visitor
+    const sendInquiry = emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, contactForm);
+    const sendAutoReply = emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_AUTOREPLY_TEMPLATE_ID, contactForm);
+
+    Promise.all([sendInquiry, sendAutoReply])
+      .then(function(responses) {
+        contactBtn.innerHTML = '<i class="fas fa-check-circle"></i> <span>Message Sent!</span>';
+        contactBtn.style.background = "#16a34a";
+        formStatus.textContent = "Thank you! Your message has been sent successfully. A confirmation email has been sent to your inbox.";
+        formStatus.style.color = "#15803d";
+        formStatus.style.background = "rgba(34,197,94,0.12)";
+        formStatus.style.border = "1px solid rgba(34,197,94,0.3)";
+        formStatus.style.display = "block";
+        contactForm.reset();
+
+        setTimeout(() => {
+          contactBtn.innerHTML = originalBtnHtml;
+          contactBtn.style.background = "";
+          contactBtn.disabled = false;
+        }, 5000);
+      })
+      .catch(function(error) {
+        contactBtn.innerHTML = '<i class="fas fa-exclamation-triangle"></i> <span>Failed to Send</span>';
+        contactBtn.style.background = "#dc2626";
+        formStatus.textContent = (error && error.text) ? error.text : "Failed to send message. Please verify your EmailJS keys.";
+        formStatus.style.color = "#b91c1c";
+        formStatus.style.background = "rgba(239,68,68,0.12)";
+        formStatus.style.border = "1px solid rgba(239,68,68,0.3)";
+        formStatus.style.display = "block";
+
+        setTimeout(() => {
+          contactBtn.innerHTML = originalBtnHtml;
+          contactBtn.style.background = "";
+          contactBtn.disabled = false;
+        }, 5000);
+      });
+  });
+}
 </script>
 </body>
 </html>
