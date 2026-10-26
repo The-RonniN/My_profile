@@ -853,186 +853,97 @@ width:100%;
 
   <div class="projects-filter reveal rd1">
     <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="cicd">CI/CD</button>
-    <button class="filter-btn" data-filter="cloud">Cloud</button>
+    <button class="filter-btn" data-filter="fullstack">Full Stack</button>
     <button class="filter-btn" data-filter="containers">Containers</button>
-    <button class="filter-btn" data-filter="iac">IaC</button>
+    <button class="filter-btn" data-filter="backend">Backend</button>
   </div>
 
   <div class="projects-grid">
 
-    <!-- Project 1 -->
-    <div class="project-card reveal rd1" data-category="cicd">
+    <!-- Project 1: QuickRent -->
+    <div class="project-card reveal rd1" data-category="fullstack">
       <div class="project-header">
         <div class="project-icon-row">
           <div class="project-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
           </div>
           <span class="project-status status-live">Live</span>
         </div>
         <div class="project-title-area">
-          <div class="project-title">CI/CD Pipeline Automation</div>
-          <div class="project-category">CI/CD · DevOps</div>
+          <div class="project-title">QuickRent – Full Stack Rental Marketplace</div>
+          <div class="project-category">Full Stack · Marketplace</div>
         </div>
       </div>
       <div class="project-body">
-        <p class="project-desc">End-to-end CI/CD pipeline using Jenkins and GitHub Actions. Automated build, test, and deploy stages with rollback support and Slack notifications on failure.</p>
+        <p class="project-desc">Full-stack rental marketplace built with React.js and Django REST Framework. Features Razorpay payments, JWT authentication, and optimized MySQL queries with 60% faster response times.</p>
         <div class="project-tags">
-          <span class="tag">Jenkins</span>
-          <span class="tag">GitHub Actions</span>
-          <span class="tag">Docker</span>
-          <span class="tag">Bash</span>
+          <span class="tag">React.js</span>
+          <span class="tag">Django</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">Razorpay API</span>
+          <span class="tag">JWT</span>
         </div>
       </div>
       <div class="project-footer">
-        <a href="https://github.com/The-RonniN"  class="proj-btn proj-btn-primary" target="_blank"><i class="fab fa-github"></i> View Code</a>
-        <a href="#" class="proj-btn proj-btn-outline"><i class="fas fa-external-link-alt"></i> Demo</a>
+        <a href="https://github.com/The-RonniN/Quickrent" class="proj-btn proj-btn-primary" target="_blank"><i class="fab fa-github"></i> View Code</a>
       </div>
     </div>
 
-    <!-- Project 2 -->
+    <!-- Project 2: CloudPilot AI -->
     <div class="project-card reveal rd2" data-category="containers">
       <div class="project-header">
         <div class="project-icon-row">
           <div class="project-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>
           </div>
-          <span class="project-status status-done">Completed</span>
-        </div>
-        <div class="project-title-area">
-          <div class="project-title">Kubernetes Microservices Deploy</div>
-          <div class="project-category">Containers · Orchestration</div>
-        </div>
-      </div>
-      <div class="project-body">
-        <p class="project-desc">Containerized a multi-service application and deployed it to a Kubernetes cluster with Helm charts, HPA, and persistent volumes for stateful workloads.</p>
-        <div class="project-tags">
-          <span class="tag">Kubernetes</span>
-          <span class="tag">Helm</span>
-          <span class="tag">Docker</span>
-          <span class="tag">YAML</span>
-        </div>
-      </div>
-      <div class="project-footer">
-        <a href="https://github.com/The-RonniN" class="proj-btn proj-btn-primary" target="_blank"><i class="fab fa-github"></i> View Code</a>
-        <a href="#" class="proj-btn proj-btn-outline"><i class="fas fa-book"></i> Docs</a>
-      </div>
-    </div>
-
-    <!-- Project 3 -->
-    <div class="project-card reveal rd3" data-category="cloud">
-      <div class="project-header">
-        <div class="project-icon-row">
-          <div class="project-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
-          </div>
           <span class="project-status status-live">Live</span>
         </div>
         <div class="project-title-area">
-          <div class="project-title">AWS 3-Tier Infrastructure</div>
-          <div class="project-category">Cloud · AWS</div>
+          <div class="project-title">CloudPilot AI – Container Monitoring Dashboard</div>
+          <div class="project-category">Containers · Monitoring</div>
         </div>
       </div>
       <div class="project-body">
-        <p class="project-desc">Designed and deployed a production-ready 3-tier architecture on AWS with VPC, ALB, EC2 Auto Scaling, RDS (Multi-AZ), and CloudWatch monitoring dashboards.</p>
+        <p class="project-desc">Real-time Docker container monitoring dashboard cutting fault detection down to 3 seconds. Built with React.js, Express.js, and Recharts streaming live telemetry from Docker daemon.</p>
         <div class="project-tags">
-          <span class="tag">AWS</span>
-          <span class="tag">VPC</span>
-          <span class="tag">EC2</span>
-          <span class="tag">RDS</span>
+          <span class="tag">React.js</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">Recharts</span>
+          <span class="tag">Dockerode</span>
+          <span class="tag">Docker</span>
         </div>
       </div>
       <div class="project-footer">
-        <a href="https://github.com/The-RonniN" class="proj-btn proj-btn-primary" target="_blank"><i class="fab fa-github"></i> View Code</a>
-        <a href="" class="proj-btn proj-btn-outline"><i class="fas fa-external-link-alt"></i> Demo</a>
-      </div>
-      
-    </div>
-
-    <!-- Project 4 -->
-    <div class="project-card reveal rd1" data-category="iac">
-      <div class="project-header">
-        <div class="project-icon-row">
-          <div class="project-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/></svg>
-          </div>
-          <span class="project-status status-wip">In Progress</span>
-        </div>
-        <div class="project-title-area">
-          <div class="project-title">Terraform AWS Modules</div>
-          <div class="project-category">IaC · Infrastructure</div>
-        </div>
-      </div>
-      <div class="project-body">
-        <p class="project-desc">Reusable Terraform modules for provisioning AWS resources — VPC, EKS, S3, IAM roles — with remote state management using S3 + DynamoDB locking.</p>
-        <div class="project-tags">
-          <span class="tag">Terraform</span>
-          <span class="tag">AWS</span>
-          <span class="tag">EKS</span>
-          <span class="tag">S3</span>
-        </div>
-      </div>
-      <div class="project-footer">
-        <a href="https://github.com/The-RonniN" class="proj-btn proj-btn-primary" target="_blank"><i class="fab fa-github"></i> View Code</a>
-        <a href="#" class="proj-btn proj-btn-outline"><i class="fas fa-book"></i> Docs</a>
+        <a href="https://github.com/The-RonniN/cloudpilot-ai" class="proj-btn proj-btn-primary" target="_blank"><i class="fab fa-github"></i> View Code</a>
       </div>
     </div>
 
-    <!-- Project 5 -->
-    <div class="project-card reveal rd2" data-category="iac">
+    <!-- Project 3: NexBank -->
+    <div class="project-card reveal rd3" data-category="backend">
       <div class="project-header">
         <div class="project-icon-row">
           <div class="project-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
           </div>
           <span class="project-status status-done">Completed</span>
         </div>
         <div class="project-title-area">
-          <div class="project-title">Ansible Server Config Mgmt</div>
-          <div class="project-category">IaC · Automation</div>
+          <div class="project-title">NexBank – High-Integrity ATM Transaction System</div>
+          <div class="project-category">Backend · FinTech</div>
         </div>
       </div>
       <div class="project-body">
-        <p class="project-desc">Automated server provisioning and configuration management with Ansible playbooks — covering web server setup, security hardening, and package management across 20+ nodes.</p>
+        <p class="project-desc">ACID-compliant ATM transaction backend built with Node.js, Express.js, and SQLite. Features JWT auth and immutable audit trails with zero transaction data loss across 500+ operations.</p>
         <div class="project-tags">
-          <span class="tag">Ansible</span>
-          <span class="tag">Linux</span>
-          <span class="tag">YAML</span>
-          <span class="tag">SSH</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">Express.js</span>
+          <span class="tag">SQLite</span>
+          <span class="tag">JWT</span>
+          <span class="tag">REST API</span>
         </div>
       </div>
       <div class="project-footer">
-        <a href="https://github.com/The-RonniN" class="proj-btn proj-btn-primary" target="_blank"><i class="fab fa-github"></i> View Code</a>
-        <a href="#" class="proj-btn proj-btn-outline"><i class="fas fa-external-link-alt"></i> Demo</a>
-      </div>
-    </div>
-
-    <!-- Project 6 -->
-    <div class="project-card reveal rd3" data-category="cicd">
-      <div class="project-header">
-        <div class="project-icon-row">
-          <div class="project-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
-          </div>
-          <span class="project-status status-done">Completed</span>
-        </div>
-        <div class="project-title-area">
-          <div class="project-title">DevSecOps Pipeline</div>
-          <div class="project-category">CI/CD · Security</div>
-        </div>
-      </div>
-      <div class="project-body">
-        <p class="project-desc">Integrated security scanning into the CI pipeline using Trivy for container image scanning, SonarQube for code quality, and OWASP dependency checks — shifting security left.</p>
-        <div class="project-tags">
-          <span class="tag">Trivy</span>
-          <span class="tag">SonarQube</span>
-          <span class="tag">Jenkins</span>
-          <span class="tag">OWASP</span>
-        </div>
-      </div>
-      <div class="project-footer">
-        <a href="https://github.com/The-RonniN" class="proj-btn proj-btn-primary" target="_blank"><i class="fab fa-github"></i> View Code</a>
-        <a href="#" class="proj-btn proj-btn-outline"><i class="fas fa-book"></i> Docs</a>
+        <a href="https://github.com/The-RonniN/High-Integrity-ATM-Transaction-System" class="proj-btn proj-btn-primary" target="_blank"><i class="fab fa-github"></i> View Code</a>
       </div>
     </div>
 
